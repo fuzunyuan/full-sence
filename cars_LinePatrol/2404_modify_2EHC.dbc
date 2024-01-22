@@ -1,0 +1,129 @@
+VERSION ""
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+	BO_TX_BU_
+	BA_DEF_REL_
+	BA_REL_
+	BA_DEF_DEF_REL_
+	BU_SG_REL_
+	BU_EV_REL_
+	BU_BO_REL_
+	SG_MUL_VAL_
+
+BS_:
+
+BU_: VCU NCU
+VAL_TABLE_ Remote_Control_Enable_Value 3 "Error" 2 "undefine" 1 "Navigation_Control" 0 "manual_control" ;
+VAL_TABLE_ RockerSwtich_Value 15 "Not Available" 14 "Fault" 3 "Quick_Down" 2 "Down_Control" 1 "UP_transport" 0 "stop" ;
+VAL_TABLE_ ReDriveCommand_Value 18 "F_direction" 1 "R_direction" 0 "N_direction" ;
+VAL_TABLE_ Re4WD_Cmd_Value 2 "Command_Error" 1 "Combine_4WD" 0 "Break_4WD" ;
+VAL_TABLE_ ReDiffLockCmd_Value 2 "Command_Error" 1 "Combine_ReDiffLock" 0 "Break_ReDiffLock" ;
+VAL_TABLE_ RearPTO_Switchs_Value 2 "Command_Error" 1 "Break_PTP" 0 "Combine_PTO" ;
+VAL_TABLE_ NCU3_enable_disable_Value 2 "Signal_Error" 1 "Enable" 0 "Disable" ;
+VAL_TABLE_ EHS_Value 1 "N" 64 "R" 16 "F" 4 "fudong" ;
+VAL_TABLE_ AutomaticRrivefnablee_Value 2 "AutomaticDriver_Error" 1 "AutomaticDriver_Enable" 0 "AutomaticDriver_Disable" ;
+VAL_TABLE_ PTO_dangweiFanKui_Value 7 "PTO_DangWei_WuXiao" 6 "DangWeiQieHuan_Error" 5 "HuanDangYouXiao" 3 "3" 2 "2" 1 "1" 0 "N" ;
+VAL_TABLE_ PTO_LiHeQiJieHeZhuangtai_Value 9 "Erroe_FanShengHuaMo" 8 "Error_FenLi" 7 "Error_JieHe" 6 "LiHeQi_FengLi" 5 "LiHeQi_ZhengZaiJieHe" 4 "LiHeQi_DaoDaJieHeDian" 3 "LiHeQi_JieHe" 1 "LiHeQi_WeiJieHe" 0 "Init" ;
+VAL_TABLE_ gaodidang_zhuangtai_fankui_Value 6 "BianSuXiang_BuKeYong" 5 "gaodidang_qiehuan_activate" 4 "dangwei_select_error" 3 "High_dangwei" 2 "NULL_dangwei" 1 "Low_dangwei" 0 "Init" ;
+VAL_TABLE_ ChaSuSuo_ZhuangtaiFanKui_Value 7 "wufashiyong" 3 "QieHuan_ZhuangTai_Error" 2 "HouQiaoChaSuSuo_Activate" 1 "KaiGuanQieHuanZhong" 0 "HouQiaoChaSuSuo_close" ;
+VAL_TABLE_ silun_qudongZhuangtaiFankuiValue 3 "qiehuanZhuangtai_error" 2 "activate_siqu" 1 "switch_qiehuan" 0 "unactivate_siqu" ;
+VAL_TABLE_ shiji_qudongModel_Value 4 "PTO_model" 3 "xianchang/gongzuo_model" 2 "undefine" 1 "yunshu/daolu_model" 0 "shoudong_model" ;
+VAL_TABLE_ dnagwei_fankui_value 22 "N" 20 "limit_gomglv_F" 19 "limit_yeya_F" 18 "unlimit_F" 15 "shousha_P" 2 "limit_yeya_R" 1 "unlimit_R" 0 "pause_N_need_targetSpeed_jiechu" ;
+
+
+BO_ 2566888945 NCU_EHC: 8 NCU
+ SG_ EHC_NO_3 : 32|8@1+ (1,0) [0|0] ""  VCU
+ SG_ EHC_NO_2 : 24|8@1+ (1,0) [0|0] ""  VCU
+ SG_ EHC_NO_1 : 16|8@1+ (1,0) [0|0] ""  VCU
+ SG_ Remote_Control_Enable : 48|2@1+ (1,0) [0|0] ""  VCU
+ SG_ RockerSwtich : 40|4@1+ (1,0) [0|0] ""  VCU
+
+BO_ 2566878193 NCU_3: 8 NCU
+ SG_ ReRatedvehicleSpeed : 48|16@1+ (0.003906,0) [0|255.9] "km/h"  VCU
+ SG_ ReDriveCommand : 40|8@1+ (1,0) [0|0] ""  VCU
+ SG_ Re4WD_Cmd : 36|2@1+ (1,0) [0|0] ""  VCU
+ SG_ ReDiffLockCmd : 34|2@1+ (1,0) [0|0] ""  VCU
+ SG_ RearPTO_Switchs : 32|2@1+ (1,0) [0|0] ""  VCU
+ SG_ EHS4_ReControlEnable : 24|2@1+ (1,0) [0|0] ""  VCU
+ SG_ EHS3_ReControlEnable : 26|2@1+ (1,0) [0|0] ""  VCU
+ SG_ EHS2_ReControlEnable : 28|2@1+ (1,0) [0|0] ""  VCU
+ SG_ EHS1_ReControlEnable : 30|2@1+ (1,0) [0|0] ""  VCU
+ SG_ PTO_ReControlEnable : 6|2@1+ (1,0) [0|0] ""  VCU
+ SG_ Vehicle_ReControlEnable : 2|2@1+ (1,0) [0|0] ""  VCU
+
+BO_ 2566877937 NCU_2: 8 NCU
+ SG_ EHS4_OperatingMode : 0|8@1+ (1,0) [0|0] ""  VCU
+ SG_ EHS3_OperatingMode : 8|8@1+ (1,0) [0|0] ""  VCU
+ SG_ EHS2_OperatingMode : 16|8@1+ (1,0) [0|0] ""  VCU
+ SG_ EHS1_OperatingMode : 24|8@1+ (1,0) [0|0] ""  VCU
+
+BO_ 2566877681 NCU_1: 8 NCU
+ SG_ FrontSteeringAngleCmd : 8|16@1+ (0.01,-100) [0|0] "¡£"  VCU
+ SG_ AutomaticDriveEnable : 0|2@1+ (1,0) [0|4] ""  VCU
+
+BO_ 2566904560 Front_SteerAngle_fankui: 8 VCU
+ SG_ FrontSteeringAngle_fankui : 16|16@1- (0.01,-100) [0|655] "¡£"  NCU
+
+BO_ 2566898691 PTO_zhuangtai_fankui: 8 VCU
+ SG_ PTO_ShuChuZhou_Speed_fankui : 40|16@1+ (0.125,0) [0|8191] "rpm"  NCU
+ SG_ PTO_DangWei_fankui : 36|3@1+ (1,0) [0|0] ""  NCU
+ SG_ PTO_LiHeQi_jiehe_fankui : 32|4@1+ (1,0) [0|0] ""  NCU
+
+BO_ 2566898179 dipan_fankui: 8 VCU
+ SG_ ShiJi_CheSpeed_fankui : 32|16@1+ (0.003906,0) [0|255.9] "km/h"  NCU
+ SG_ gaodiDang_Signal_fankui : 24|3@1+ (1,0) [0|7] ""  NCU
+ SG_ ChaSuSuo_ZhuangTai_FanKui : 20|4@1+ (1,0) [0|8] ""  NCU
+ SG_ silun_Driveri_fankui : 16|4@1+ (1,0) [0|0] ""  NCU
+ SG_ shiji_qudongModel_fankui : 8|8@1+ (1,0) [0|5] ""  NCU
+ SG_ dangwei_fankui : 0|8@1+ (1,0) [0|23] ""  NCU
+
+
+
+BA_DEF_  "BusType" STRING ;
+BA_DEF_DEF_  "BusType" "CAN";
+VAL_ 2566888945 Remote_Control_Enable 3 "Error" 2 "undefine" 1 "Navigation_Control" 0 "manual_control" ;
+VAL_ 2566888945 RockerSwtich 15 "Not Available" 14 "Fault" 3 "Quick_Down" 2 "Down_Control" 1 "UP_transport" 0 "stop" ;
+VAL_ 2566878193 ReDriveCommand 18 "F_direction" 1 "R_direction" 0 "N_direction" ;
+VAL_ 2566878193 Re4WD_Cmd 2 "Command_Error" 1 "Combine_4WD" 0 "Break_4WD" ;
+VAL_ 2566878193 ReDiffLockCmd 2 "Command_Error" 1 "Combine_ReDiffLock" 0 "Break_ReDiffLock" ;
+VAL_ 2566878193 RearPTO_Switchs 2 "Command_Error" 1 "Combine_PTO" 0 "Break_PTO" ;
+VAL_ 2566878193 EHS4_ReControlEnable 2 "Signal_Error" 1 "Enable" 0 "Disable" ;
+VAL_ 2566878193 EHS3_ReControlEnable 2 "Signal_Error" 1 "Enable" 0 "Disable" ;
+VAL_ 2566878193 EHS2_ReControlEnable 2 "Signal_Error" 1 "Enable" 0 "Disable" ;
+VAL_ 2566878193 EHS1_ReControlEnable 2 "Signal_Error" 1 "Enable" 0 "Disable" ;
+VAL_ 2566878193 PTO_ReControlEnable 2 "Signal_Error" 1 "Enable" 0 "Disable" ;
+VAL_ 2566878193 Vehicle_ReControlEnable 2 "Signal_Error" 1 "Enable" 0 "Disable" ;
+VAL_ 2566877937 EHS4_OperatingMode 1 "N" 64 "R" 16 "F" 4 "fudong" ;
+VAL_ 2566877937 EHS3_OperatingMode 1 "N" 64 "R" 16 "F" 4 "fudong" ;
+VAL_ 2566877937 EHS2_OperatingMode 1 "N" 64 "R" 16 "F" 4 "fudong" ;
+VAL_ 2566877937 EHS1_OperatingMode 1 "N" 64 "R" 16 "F" 4 "fudong" ;
+VAL_ 2566877681 AutomaticDriveEnable 2 "AutomaticDriver_Error" 1 "AutomaticDriver_Enable" 0 "AutomaticDriver_Disable" ;
+VAL_ 2566898691 PTO_DangWei_fankui 7 "PTO_DangWei_WuXiao" 6 "DangWeiQieHuan_Error" 5 "HuanDangYouXiao" 3 "3" 2 "2" 1 "1" 0 "N" ;
+VAL_ 2566898691 PTO_LiHeQi_jiehe_fankui 9 "Erroe_FanShengHuaMo" 8 "Error_FenLi" 7 "Error_JieHe" 6 "LiHeQi_FengLi" 5 "LiHeQi_ZhengZaiJieHe" 4 "LiHeQi_DaoDaJieHeDian" 3 "LiHeQi_JieHe" 1 "LiHeQi_WeiJieHe" 0 "Init" ;
+VAL_ 2566898179 gaodiDang_Signal_fankui 6 "BianSuXiang_BuKeYong" 5 "gaodidang_qiehuan_activate" 4 "dangwei_select_error" 3 "High_dangwei" 2 "NULL_dangwei" 1 "Low_dangwei" 0 "Init" ;
+VAL_ 2566898179 ChaSuSuo_ZhuangTai_FanKui 7 "wufashiyong" 3 "QieHuan_ZhuangTai_Error" 2 "HouQiaoChaSuSuo_Activate" 1 "KaiGuanQieHuanZhong" 0 "HouQiaoChaSuSuo_close" ;
+VAL_ 2566898179 silun_Driveri_fankui 3 "qiehuanZhuangtai_error" 2 "activate_siqu" 1 "switch_qiehuan" 0 "unactivate_siqu" ;
+VAL_ 2566898179 shiji_qudongModel_fankui 4 "PTO_model" 3 "xianchang/gongzuo_model" 2 "undefine" 1 "yunshu/daolu_model" 0 "shoudong_model" ;
+VAL_ 2566898179 dangwei_fankui 22 "N" 20 "limit_gomglv_F" 19 "limit_yeya_F" 18 "unlimit_F" 15 "shousha_P" 2 "limit_yeya_R" 1 "unlimit_R" 0 "pause_N_need_targetSpeed_jiechu" ;
+
