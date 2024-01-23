@@ -715,7 +715,7 @@ def producer_In(fontIndex, backIndex):
             print(direct)
             frame = cv2.flip(frame1, 1, frame1)  # 镜像图像
             hsv = cv2.cvtColor(frame, cv2.COLOR_RGB2HSV)  # 转换为HSV
-            lower_white = np.array([80, 80, 30])
+            lower_white = np.array([80, 100, 70])
             upper_white = np.array([120, 255, 255])
 
             '''以下是计算角度的方法'''
@@ -836,10 +836,10 @@ def producer_In1(fontIndex, backIndex):
     time_start = seconds_get()
     while 1:
         end_start = seconds_get()
-        if end_start - time_start > 83:
+        if end_start - time_start > 81:
             vcu_cmd.send_motion_ctrl_msg(1, 1, "空挡", 0, 0, 0)
             return
-        vcu_cmd.send_motion_ctrl_msg(1, 1, "后退", 21.25, 0.7, 0)
+        vcu_cmd.send_motion_ctrl_msg(1, 1, "后退", 21.7, 0.7, 0)
 
 # def testLine(backIndex):
 #
