@@ -866,7 +866,7 @@ if __name__ == "__main__":
     fontIndex = 4
     backIndex = 2
     # 执行出机库操作
-    producer_In1(fontIndex,backIndex)
+    # producer_In1(fontIndex,backIndex)
     # producer_Out(fontIndex)
     # 执行进机库操作
     producer_In(fontIndex, backIndex)

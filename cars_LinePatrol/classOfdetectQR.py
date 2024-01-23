@@ -3,7 +3,7 @@ from pyzbar import  pyzbar
 
 # global getRun
 # 二维码动态识别
-camera = cv2.VideoCapture(2)
+camera = cv2.VideoCapture(4)
 camera.set(3, 1280)  # 设置分辨率
 camera.set(4, 768)
 while True:
