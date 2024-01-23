@@ -3,10 +3,10 @@ import os
 
 '''function ： 用来截取每一帧的图像'''
 # 视频文件路径
-video_path = 'videoBase/videoAll/01-05-2024 屏幕视频 10:24:39 AM.mp4'
+video_path = 'videoBase/红色车道线.mp4'
 
 # 创建保存图片的文件夹
-save_folder = 'extracted_frames6'
+save_folder = 'extractPic/temp1'
 if not os.path.exists(save_folder):
     os.makedirs(save_folder)
 

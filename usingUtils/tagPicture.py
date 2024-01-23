@@ -3,10 +3,10 @@ import os
 
 '''用来标记每一帧的图像的范围'''
 # 图片文件夹路径
-image_folder_path = './tempPicture'
+image_folder_path = './tempPic'
 
 # 要标记的区域（左上角x坐标，左上角y坐标，右下角x坐标，右下角y坐标）
-mark_area = (430, 80, 1500, 870)
+mark_area = (400, 80, 1520, 920)
 
 # 创建保存标记图片的文件夹
 marked_folder = 'marked_images'

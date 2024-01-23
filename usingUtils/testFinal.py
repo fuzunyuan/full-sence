@@ -25,7 +25,7 @@ def produce():
     log_origin_path = log_path + "origin.txt"
 
     # 图片文件夹路径
-    image_folder_path = './cropped_images6'
+    image_folder_path = 'resultBase/cropped_images'
     print(os.listdir(image_folder_path))
     h = os.listdir(image_folder_path)
     h.sort(key=lambda x: int(x.split('.')[0]))
