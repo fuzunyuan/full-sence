@@ -25,7 +25,7 @@ def produce():
     log_origin_path = log_path + "origin.txt"
 
     # 图片文件夹路径
-    image_folder_path = 'resultBase/cropped_images'
+    image_folder_path = 'resultBase/cropped_images2'
     print(os.listdir(image_folder_path))
     h = os.listdir(image_folder_path)
     h.sort(key=lambda x: int(x.split('.')[0]))
@@ -54,8 +54,8 @@ def produce():
                 # frame[image_y + 50:image_y * 2, 0:image_x * 2] = [0, 0, 0]
 
                 hsv = cv2.cvtColor(frame, cv2.COLOR_RGB2HSV)  # 转换为HSV
-                lower_white = np.array([80, 120, 30])
-                upper_white = np.array([100, 255, 255])
+                lower_white = np.array([80, 10, 20])
+                upper_white = np.array([120, 255, 255])
 
                 image_y, image_x = int(frame.shape[0] / 2), int(frame.shape[1] / 2)
                 central_point = (image_x, image_y)  # 画面中心点
@@ -131,7 +131,7 @@ def produce():
                 log_message(f"{filename} 前轮转角为 ： " + str(angle), log_angle_path)
                 cv2.putText(frame, str(angle), (image_x, frame.shape[0]),
                             cv2.FONT_HERSHEY_COMPLEX, 1.5, (0, 0, 255), 3)
-                newfileName = "detectPic6/" + filename
+                newfileName = "detectPic/" + filename
                 cv2.imwrite(newfileName, frame)
             else:
                 print(f"无法加载图片: {filename} ", log_path)

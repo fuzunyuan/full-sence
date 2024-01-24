@@ -3,10 +3,10 @@ import os
 
 '''function ： 用来截取每一帧的图像'''
 # 视频文件路径
-video_path = 'videoBase/红色车道线.mp4'
+video_path = 'videoBase/testFinal2.mp4'
 
 # 创建保存图片的文件夹
-save_folder = 'extractPic/temp1'
+save_folder = 'extractPic/testFinal2'
 if not os.path.exists(save_folder):
     os.makedirs(save_folder)
 
@@ -19,7 +19,7 @@ if not cap.isOpened():
     exit()
 
 # 设置提取帧的时间间隔（秒）
-interval = 0.1
+interval = 0.5
 
 # 视频的帧率
 fps = cap.get(cv2.CAP_PROP_FPS)

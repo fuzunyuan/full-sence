@@ -3,12 +3,12 @@ import numpy as np
 import math
 
 
-frame = cv2.imread("./1.jpg")
+frame = cv2.imread("resultBase/cropped_images1/7.jpg")
 hsv = cv2.cvtColor(frame, cv2.COLOR_RGB2HSV)  # 转换为HSV
 
 
-lower_white = np.array([80, 120, 30])
-upper_white = np.array([100, 255, 255])
+lower_white = np.array([80, 13, 23])
+upper_white = np.array([120, 255, 255])
 
 try:
     mask = cv2.inRange(hsv, lower_white, upper_white)  # 提取白色
